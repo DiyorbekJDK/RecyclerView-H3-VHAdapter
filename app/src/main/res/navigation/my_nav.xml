@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fatherFragment">
+    <fragment
+        android:id="@+id/helloFragment"
+        android:name="com.diyorbek.wallpaper.fragments.HelloFragment"
+        android:label="fragment_hello"
+        tools:layout="@layout/fragment_hello" />
+    <fragment
+        android:id="@+id/fatherFragment"
+        android:name="com.diyorbek.wallpaper.fragments.FatherFragment"
+        android:label="fragment_father"
+        tools:layout="@layout/fragment_father" >
+        <action
+            android:id="@+id/action_fatherFragment_to_helloFragment"
+            app:destination="@id/helloFragment" />
+    </fragment>
+</navigation>
